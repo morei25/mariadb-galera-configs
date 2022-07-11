@@ -1,0 +1,192 @@
+[38;5;6mmariadb [38;5;5m08:42:41.93 [0m
+[38;5;6mmariadb [38;5;5m08:42:41.93 [0m[1mWelcome to the Bitnami mariadb-galera container[0m
+[38;5;6mmariadb [38;5;5m08:42:41.94 [0mSubscribe to project updates by watching [1mhttps://github.com/bitnami/bitnami-docker-mariadb-galera[0m
+[38;5;6mmariadb [38;5;5m08:42:41.94 [0mSubmit issues and feature requests at [1mhttps://github.com/bitnami/bitnami-docker-mariadb-galera/issues[0m
+[38;5;6mmariadb [38;5;5m08:42:41.94 [0m
+[38;5;6mmariadb [38;5;5m08:42:41.94 [0m[38;5;2mINFO [0m ==> ** Starting MariaDB setup **
+[38;5;6mmariadb [38;5;5m08:42:41.97 [0m[38;5;2mINFO [0m ==> Validating settings in MYSQL_*/MARIADB_* env vars
+[38;5;6mmariadb [38;5;5m08:42:41.99 [0m[38;5;2mINFO [0m ==> Initializing mariadb database
+[38;5;6mmariadb [38;5;5m08:42:42.01 [0m[38;5;3mWARN [0m ==> This node was previouly booted, you may need to force bootstrapping in one of the nodes.
+[38;5;6mmariadb [38;5;5m08:42:42.03 [0m[38;5;2mINFO [0m ==> Found mounted configuration directory
+[38;5;6mmariadb [38;5;5m08:42:42.04 [0m[38;5;2mINFO [0m ==> Updating 'my.cnf' with custom configuration
+[38;5;6mmariadb [38;5;5m08:42:42.05 [0m[38;5;2mINFO [0m ==> Setting user option
+[38;5;6mmariadb [38;5;5m08:42:42.05 [0m[38;5;2mINFO [0m ==> Setting slow_query_log option
+[38;5;6mmariadb [38;5;5m08:42:42.06 [0m[38;5;2mINFO [0m ==> Setting long_query_time option
+[38;5;6mmariadb [38;5;5m08:42:42.07 [0m[38;5;2mINFO [0m ==> Setting wsrep_node_name option
+[38;5;6mmariadb [38;5;5m08:42:42.09 [0m[38;5;2mINFO [0m ==> Setting wsrep_node_address option
+[38;5;6mmariadb [38;5;5m08:42:42.12 [0m[38;5;2mINFO [0m ==> Setting wsrep_cluster_address option
+[38;5;6mmariadb [38;5;5m08:42:42.13 [0m[38;5;2mINFO [0m ==> Setting wsrep_sst_auth option
+find: '/docker-entrypoint-startdb.d/': No such file or directory
+
+[38;5;6mmariadb [38;5;5m08:42:42.15 [0m[38;5;2mINFO [0m ==> ** MariaDB setup finished! **
+[38;5;6mmariadb [38;5;5m08:42:42.18 [0m[38;5;2mINFO [0m ==> ** Starting MariaDB **
+[38;5;6mmariadb [38;5;5m08:42:42.19 [0m[38;5;2mINFO [0m ==> Setting previous boot
+2022-07-11  8:42:42 0 [Note] /opt/bitnami/mariadb/sbin/mysqld (server 10.6.8-MariaDB-log) starting as process 1 ...
+2022-07-11  8:42:42 0 [Note] WSREP: Loading provider /opt/bitnami/mariadb/lib/libgalera_smm.so initial position: 00000000-0000-0000-0000-000000000000:-1
+2022-07-11  8:42:42 0 [Note] WSREP: wsrep_load(): loading provider library '/opt/bitnami/mariadb/lib/libgalera_smm.so'
+2022-07-11  8:42:42 0 [Note] WSREP: wsrep_load(): Galera 4.12(r6311685) by Codership Oy <info@codership.com> loaded successfully.
+2022-07-11  8:42:42 0 [Note] WSREP: CRC-32C: using 64-bit x86 acceleration.
+2022-07-11  8:42:42 0 [Note] WSREP: Found saved state: 00000000-0000-0000-0000-000000000000:-1, safe_to_bootstrap: 1
+2022-07-11  8:42:42 0 [Note] WSREP: GCache DEBUG: opened preamble:
+Version: 2
+UUID: 533a289a-fbbc-11ec-9fbd-bb5c431ef9a3
+Seqno: -1 - -1
+Offset: -1
+Synced: 0
+2022-07-11  8:42:42 0 [Note] WSREP: Recovering GCache ring buffer: version: 2, UUID: 533a289a-fbbc-11ec-9fbd-bb5c431ef9a3, offset: -1
+2022-07-11  8:42:42 0 [Note] WSREP: GCache::RingBuffer initial scan...  0.0% (        0/134217752 bytes) complete.
+2022-07-11  8:42:42 0 [Note] WSREP: GCache::RingBuffer initial scan...100.0% (134217752/134217752 bytes) complete.
+2022-07-11  8:42:42 0 [Note] WSREP: Recovering GCache ring buffer: Recovery failed, need to do full reset.
+2022-07-11  8:42:42 0 [Note] WSREP: Passing config to GCS: base_dir = /bitnami/mariadb/data/; base_host = 10.42.160.27; base_port = 4567; cert.log_conflicts = no; cert.optimistic_pa = yes; debug = no; evs.auto_evict = 0; evs.delay_margin = PT1S; evs.delayed_keep_period = PT30S; evs.inactive_check_period = PT0.5S; evs.inactive_timeout = PT15S; evs.join_retrans_period = PT1S; evs.max_install_timeouts = 3; evs.send_window = 4; evs.stats_report_period = PT1M; evs.suspect_timeout = PT5S; evs.user_send_window = 2; evs.view_forget_timeout = PT24H; gcache.dir = /bitnami/mariadb/data/; gcache.keep_pages_size = 0; gcache.mem_size = 0; gcache.name = galera.cache; gcache.page_size = 128M; gcache.recover = yes; gcache.size = 128M; gcomm.thread_prio = ; gcs.fc_debug = 0; gcs.fc_factor = 1.0; gcs.fc_limit = 16; gcs.fc_master_slave = no; gcs.fc_single_primary = no; gcs.max_packet_size = 64500; gcs.max_throttle = 0.25; gcs.recv_q_hard_limit = 9223372036854775807; gcs.recv_q_soft_limit = 0.25; gcs.sync_donor = no; gmcast.segment = 0; gmcast.version = 0; 
+2022-07-11  8:42:42 0 [Note] WSREP: Start replication
+2022-07-11  8:42:42 0 [Note] WSREP: Connecting with bootstrap option: 0
+2022-07-11  8:42:42 0 [Note] WSREP: Setting GCS initial position to 00000000-0000-0000-0000-000000000000:-1
+2022-07-11  8:42:42 0 [Note] WSREP: protonet asio version 0
+2022-07-11  8:42:42 0 [Note] WSREP: Using CRC-32C for message checksums.
+2022-07-11  8:42:42 0 [Note] WSREP: backend: asio
+2022-07-11  8:42:42 0 [Note] WSREP: gcomm thread scheduling priority set to other:0 
+2022-07-11  8:42:42 0 [Note] WSREP: access file(/bitnami/mariadb/data//gvwstate.dat) failed(No such file or directory)
+2022-07-11  8:42:42 0 [Note] WSREP: restore pc from disk failed
+2022-07-11  8:42:42 0 [Note] WSREP: GMCast version 0
+2022-07-11  8:42:42 0 [Warning] WSREP: Failed to resolve tcp://dev-mariadb-galera-2.dev-mariadb-galera-headless.dev-confluence.svc.cluster.local:4567
+2022-07-11  8:42:42 0 [Note] WSREP: (6d94adac-bbe6, 'tcp://0.0.0.0:4567') listening at tcp://0.0.0.0:4567
+2022-07-11  8:42:42 0 [Note] WSREP: (6d94adac-bbe6, 'tcp://0.0.0.0:4567') multicast: , ttl: 1
+2022-07-11  8:42:42 0 [Note] WSREP: EVS version 1
+2022-07-11  8:42:42 0 [Note] WSREP: gcomm: connecting to group 'galera', peer 'dev-mariadb-galera-0.dev-mariadb-galera-headless.dev-confluence.svc.cluster.local:,dev-mariadb-galera-1.dev-mariadb-galera-headless.dev-confluence.svc.cluster.local:,dev-mariadb-galera-2.dev-mariadb-galera-headless.dev-confluence.svc.cluster.local:'
+2022-07-11  8:42:42 0 [Note] WSREP: (6d94adac-bbe6, 'tcp://0.0.0.0:4567') Found matching local endpoint for a connection, blacklisting address tcp://10.42.160.27:4567
+2022-07-11  8:42:42 0 [Note] WSREP: (6d94adac-bbe6, 'tcp://0.0.0.0:4567') connection established to 5d65288d-a79a tcp://10.42.208.16:4567
+2022-07-11  8:42:42 0 [Note] WSREP: (6d94adac-bbe6, 'tcp://0.0.0.0:4567') turning message relay requesting on, nonlive peers: 
+2022-07-11  8:42:42 0 [Note] WSREP: EVS version upgrade 0 -> 1
+2022-07-11  8:42:42 0 [Note] WSREP: declaring 5d65288d-a79a at tcp://10.42.208.16:4567 stable
+2022-07-11  8:42:42 0 [Note] WSREP: PC protocol upgrade 0 -> 1
+2022-07-11  8:42:42 0 [Note] WSREP: Node 5d65288d-a79a state prim
+2022-07-11  8:42:42 0 [Note] WSREP: view(view_id(PRIM,5d65288d-a79a,3602) memb {
+	5d65288d-a79a,0
+	6d94adac-bbe6,0
+} joined {
+} left {
+} partitioned {
+})
+2022-07-11  8:42:42 0 [Note] WSREP: save pc into disk
+2022-07-11  8:42:43 0 [Note] WSREP: gcomm: connected
+2022-07-11  8:42:43 0 [Note] WSREP: Changing maximum packet size to 64500, resulting msg size: 32636
+2022-07-11  8:42:43 0 [Note] WSREP: Shifting CLOSED -> OPEN (TO: 0)
+2022-07-11  8:42:43 0 [Note] WSREP: Opened channel 'galera'
+2022-07-11  8:42:43 0 [Note] WSREP: New COMPONENT: primary = yes, bootstrap = no, my_idx = 1, memb_num = 2
+2022-07-11  8:42:43 0 [Note] WSREP: STATE EXCHANGE: Waiting for state UUID.
+2022-07-11  8:42:43 0 [Note] WSREP: STATE EXCHANGE: sent state msg: 6de2e3c7-00f5-11ed-a7d1-f7df830f7321
+2022-07-11  8:42:43 0 [Note] WSREP: STATE EXCHANGE: got state msg: 6de2e3c7-00f5-11ed-a7d1-f7df830f7321 from 0 (dev-mariadb-galera-0)
+2022-07-11  8:42:43 2 [Note] WSREP: Starting applier thread 2
+2022-07-11  8:42:43 1 [Note] WSREP: Starting rollbacker thread 1
+2022-07-11  8:42:43 0 [Note] WSREP: STATE EXCHANGE: got state msg: 6de2e3c7-00f5-11ed-a7d1-f7df830f7321 from 1 (dev-mariadb-galera-1)
+2022-07-11  8:42:43 0 [Note] WSREP: Quorum results:
+	version    = 6,
+	component  = PRIMARY,
+	conf_id    = 3601,
+	members    = 1/2 (joined/total),
+	act_id     = 3628,
+	last_appl. = 27,
+	protocols  = 2/10/4 (gcs/repl/appl),
+	vote policy= 0,
+	group UUID = 533a289a-fbbc-11ec-9fbd-bb5c431ef9a3
+2022-07-11  8:42:43 0 [Note] WSREP: Flow-control interval: [23, 23]
+2022-07-11  8:42:43 0 [Note] WSREP: Shifting OPEN -> PRIMARY (TO: 3629)
+2022-07-11  8:42:43 2 [Note] WSREP: ####### processing CC 3629, local, ordered
+2022-07-11  8:42:43 2 [Note] WSREP: Process first view: 533a289a-fbbc-11ec-9fbd-bb5c431ef9a3 my uuid: 6d94adac-00f5-11ed-bbe6-ffe539a43aae
+2022-07-11  8:42:43 2 [Note] WSREP: Server dev-mariadb-galera-1 connected to cluster at position 533a289a-fbbc-11ec-9fbd-bb5c431ef9a3:3629 with ID 6d94adac-00f5-11ed-bbe6-ffe539a43aae
+2022-07-11  8:42:43 2 [Note] WSREP: Server status change disconnected -> connected
+2022-07-11  8:42:43 2 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+2022-07-11  8:42:43 2 [Note] WSREP: ####### My UUID: 6d94adac-00f5-11ed-bbe6-ffe539a43aae
+2022-07-11  8:42:43 2 [Note] WSREP: Cert index reset to 00000000-0000-0000-0000-000000000000:-1 (proto: 10), state transfer needed: yes
+2022-07-11  8:42:43 0 [Note] WSREP: Service thread queue flushed.
+2022-07-11  8:42:43 2 [Note] WSREP: ####### Assign initial position for certification: 00000000-0000-0000-0000-000000000000:-1, protocol version: -1
+2022-07-11  8:42:43 2 [Note] WSREP: State transfer required: 
+	Group state: 533a289a-fbbc-11ec-9fbd-bb5c431ef9a3:3629
+	Local state: 00000000-0000-0000-0000-000000000000:-1
+2022-07-11  8:42:43 2 [Note] WSREP: Server status change connected -> joiner
+2022-07-11  8:42:43 2 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+2022-07-11  8:42:43 0 [Note] WSREP: Joiner monitor thread started to monitor
+2022-07-11  8:42:43 0 [Note] WSREP: Running: 'wsrep_sst_mariabackup --role 'joiner' --address '10.42.160.27' --datadir '/bitnami/mariadb/data/' --defaults-file '/opt/bitnami/mariadb/conf/my.cnf' --parent '1' --binlog 'mysql-bin' --mysqld-args --defaults-file=/opt/bitnami/mariadb/conf/my.cnf --basedir=/opt/bitnami/mariadb --datadir=/bitnami/mariadb/data --socket=/opt/bitnami/mariadb/tmp/mysql.sock --pid-file=/opt/bitnami/mariadb/tmp/mysqld.pid'
+WSREP_SST: [INFO] mariabackup SST started on joiner (20220711 08:42:43.435)
+WSREP_SST: [INFO] SSL configuration: CA='', CAPATH='', CERT='', KEY='', MODE='DISABLED', encrypt='0' (20220711 08:42:43.503)
+WSREP_SST: [INFO] Streaming with mbstream (20220711 08:42:43.653)
+WSREP_SST: [INFO] Using socat as streamer (20220711 08:42:43.656)
+WSREP_SST: [INFO] Evaluating timeout -k 310 300 socat -u TCP-LISTEN:4444,reuseaddr stdio | '/opt/bitnami/mariadb//bin/mbstream' -x; RC=( ${PIPESTATUS[@]} ) (20220711 08:42:43.700)
+2022-07-11  8:42:43 2 [Note] WSREP: ####### IST uuid:00000000-0000-0000-0000-000000000000 f: 0, l: 3629, STRv: 3
+2022-07-11  8:42:43 2 [Note] WSREP: IST receiver addr using tcp://10.42.160.27:4568
+2022-07-11  8:42:43 2 [Note] WSREP: Prepared IST receiver for 0-3629, listening at: tcp://10.42.160.27:4568
+2022-07-11  8:42:43 0 [Note] WSREP: Member 1.0 (dev-mariadb-galera-1) requested state transfer from '*any*'. Selected 0.0 (dev-mariadb-galera-0)(SYNCED) as donor.
+2022-07-11  8:42:43 0 [Note] WSREP: Shifting PRIMARY -> JOINER (TO: 3629)
+2022-07-11  8:42:43 2 [Note] WSREP: Requesting state transfer: success, donor: 0
+2022-07-11  8:42:43 2 [Note] WSREP: Resetting GCache seqno map due to different histories.
+2022-07-11  8:42:43 2 [Note] WSREP: GCache history reset: 533a289a-fbbc-11ec-9fbd-bb5c431ef9a3:0 -> 533a289a-fbbc-11ec-9fbd-bb5c431ef9a3:3629
+WSREP_SST: [INFO] WARNING: Stale temporary SST directory: '/bitnami/mariadb/data/.sst' from previous state transfer, removing... (20220711 08:42:44.101)
+WSREP_SST: [INFO] Proceeding with SST (20220711 08:42:44.107)
+WSREP_SST: [INFO] Evaluating socat -u TCP-LISTEN:4444,reuseaddr stdio | '/opt/bitnami/mariadb//bin/mbstream' -x; RC=( ${PIPESTATUS[@]} ) (20220711 08:42:44.108)
+WSREP_SST: [INFO] Cleaning the old binary logs (20220711 08:42:44.126)
+WSREP_SST: [INFO] Cleaning the existing datadir and innodb-data/log directories (20220711 08:42:44.131)
+WSREP_SST: [INFO] Waiting for SST streaming to complete! (20220711 08:42:44.138)
+2022-07-11  8:42:45 0 [Note] WSREP: (6d94adac-bbe6, 'tcp://0.0.0.0:4567') turning message relay requesting off
+WSREP_SST: [ERROR] xtrabackup_checkpoints missing, failed mariabackup/SST on donor (20220711 08:42:54.126)
+WSREP_SST: [ERROR] Cleanup after exit with status: 2 (20220711 08:42:54.129)
+WSREP_SST: [ERROR] Removing /bitnami/mariadb/data/.sst/xtrabackup_galera_info file due to signal (20220711 08:42:54.134)
+2022-07-11  8:42:54 0 [Warning] WSREP: 0.0 (dev-mariadb-galera-0): State transfer to 1.0 (dev-mariadb-galera-1) failed: -22 (Invalid argument)
+2022-07-11  8:42:54 0 [ERROR] WSREP: /bitnami/blacksmith-sandox/libgalera-26.4.12/gcs/src/gcs_group.cpp:gcs_group_handle_join_msg():1170: Will never receive state. Need to abort.
+2022-07-11  8:42:54 0 [Note] WSREP: gcomm: terminating thread
+2022-07-11  8:42:54 0 [Note] WSREP: gcomm: joining thread
+2022-07-11  8:42:54 0 [Note] WSREP: gcomm: closing backend
+WSREP_SST: [INFO] Removing the sst_in_progress file (20220711 08:42:54.136)
+WSREP_SST: [INFO] Cleaning up temporary directories (20220711 08:42:54.141)
+2022-07-11  8:42:54 0 [ERROR] WSREP: Process completed with error: wsrep_sst_mariabackup --role 'joiner' --address '10.42.160.27' --datadir '/bitnami/mariadb/data/' --defaults-file '/opt/bitnami/mariadb/conf/my.cnf' --parent '1' --binlog 'mysql-bin' --mysqld-args --defaults-file=/opt/bitnami/mariadb/conf/my.cnf --basedir=/opt/bitnami/mariadb --datadir=/bitnami/mariadb/data --socket=/opt/bitnami/mariadb/tmp/mysql.sock --pid-file=/opt/bitnami/mariadb/tmp/mysqld.pid: 2 (No such file or directory)
+2022-07-11  8:42:54 0 [ERROR] WSREP: Failed to read uuid:seqno and wsrep_gtid_domain_id from joiner script.
+2022-07-11  8:42:54 3 [Note] WSREP: SST received
+2022-07-11  8:42:54 3 [Note] WSREP: SST received: 00000000-0000-0000-0000-000000000000:-1
+2022-07-11  8:42:54 3 [Note] WSREP: SST succeeded for position 00000000-0000-0000-0000-000000000000:-1
+2022-07-11  8:42:54 2 [ERROR] WSREP: Application received wrong state: 
+	Received: 00000000-0000-0000-0000-000000000000
+	Required: 533a289a-fbbc-11ec-9fbd-bb5c431ef9a3
+2022-07-11  8:42:54 2 [ERROR] WSREP: Application state transfer failed. This is unrecoverable condition, restart required.
+2022-07-11  8:42:54 2 [Note] WSREP: ReplicatorSMM::abort()
+2022-07-11  8:42:54 2 [Note] WSREP: Closing send monitor...
+2022-07-11  8:42:54 2 [Note] WSREP: Closed send monitor.
+2022-07-11  8:42:54 0 [Note] WSREP: Joiner monitor thread ended with total time 11 sec
+2022-07-11  8:42:55 0 [Note] WSREP: view(view_id(NON_PRIM,5d65288d-a79a,3602) memb {
+	6d94adac-bbe6,0
+} joined {
+} left {
+} partitioned {
+	5d65288d-a79a,0
+})
+2022-07-11  8:42:55 0 [Note] WSREP: PC protocol downgrade 1 -> 0
+2022-07-11  8:42:55 0 [Note] WSREP: view((empty))
+2022-07-11  8:42:55 0 [Note] WSREP: gcomm: closed
+2022-07-11  8:42:55 0 [Note] WSREP: /opt/bitnami/mariadb/sbin/mysqld: Terminated.
+220711  8:42:55 [ERROR] mysqld got signal 11 ;
+This could be because you hit a bug. It is also possible that this binary
+or one of the libraries it was linked against is corrupt, improperly built,
+or misconfigured. This error can also be caused by malfunctioning hardware.
+
+To report this bug, see https://mariadb.com/kb/en/reporting-bugs
+
+We will try our best to scrape up some info that will hopefully help
+diagnose the problem, but since we have already crashed, 
+something is definitely wrong and this may fail.
+
+Server version: 10.6.8-MariaDB-log
+key_buffer_size=0
+read_buffer_size=131072
+max_used_connections=0
+max_threads=1002
+thread_count=2
+It is possible that mysqld could use up to 
+key_buffer_size + (read_buffer_size + sort_buffer_size)*max_threads = 2206424 K  bytes of memory
+Hope that's ok; if not, decrease some variables in the equation.
+
+Thread pointer: 0x0
+Attempting backtrace. You can use the following information to find out
+where mysqld died. If you see no messages after this, something went
+terribly wrong...
+stack_bottom = 0x0 thread_stack 0x49000
+2022-07-11  8:42:55 2 [Note] WSREP: gcomm: terminating thread
+2022-07-11  8:42:55 2 [Note] WSREP: gcomm: joining thread
+2022-07-11  8:42:55 2 [Note] WSREP: gcomm: closing backend
